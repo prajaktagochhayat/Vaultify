@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: cloud-storage-backend
+  datasource:
+    url: jdbc:postgresql://db.frdbtajvtrftqcjpxsvz.supabase.co:5432/postgres?sslmode=require
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: FtUrU5GNVEQ1wO0D
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+app:
+  jwt:
+    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    expiration-ms: 86400000 # 24 hours
+  supabase:
+    url: https://frdbtajvtrftqcjpxsvz.supabase.co
+    anon-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyZGJ0YWp2dHJmdHFjanB4c3Z6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyMjYyMTgsImV4cCI6MjEwNDgwMjIxOH0.Y1f-gL20cpTqiCutSzzqmRWiPXnOP9OFOO_gB3-O5tc
+    service-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyZGJ0YWp2dHJmdHFjanB4c3Z6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4OTIyNjIxOCwiZXhwIjoyMTA0ODAyMjE4fQ.6noWPr4SSKD5mzwro0GJ6gSzbpiflqsj9whYaIgm_ys
+  storage:
+    location: ./uploads

@@ -1,0 +1,19 @@
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/npm-debug.log*
+
+# Java / Spring Boot / Backend
+backend/target/
+backend/data/
+backend/uploads/
+backend/.mvn/
+backend/*.log
+
+# IDE & System
+.idea/
+.vscode/
+*.swp
+*.DS_Store
+Thumbs.db
